@@ -1,6 +1,6 @@
 # EnrichEval — what the eval found
 
-*Data note: all numbers below come from a 52-row seed of synthetic descriptors for real merchants,
+*Data note: all numbers below come from a 55-row seed of synthetic descriptors for real merchants,
 scored by a deterministic rules enricher. They are a methodology demonstration, not production
 quality. The point is the method, not the magnitude.*
 
@@ -11,12 +11,12 @@ base, more processor-prefix handling, and richer recurring cues) lifted every he
 
 | Field | v1 | v2 |
 |---|---|---|
-| Merchant accuracy | 54% | 87% |
-| Primary category | 62% | 92% |
-| Detailed category | 62% | 92% |
-| Recurring F1 | 0.64 | 1.00 |
+| Merchant accuracy | 51% | 82% |
+| Primary category | 62% | 91% |
+| Detailed category | 60% | 89% |
+| Recurring F1 | 0.58 | 0.91 |
 
-But the averages hide three findings that actually shape a roadmap.
+But the averages hide five findings that actually shape a roadmap.
 
 ## Finding 1 — v1's merchant problem is coverage, not parsing
 
@@ -48,9 +48,27 @@ fixed many DoorDash/Uber-Eats rows over-applies here and masks a real merchant.
 
 This is the entire reason a quality eval runs on every change: a net-positive release can still break
 a specific, customer-visible case. A release gate keyed on per-row regressions catches it; a gate
-keyed only on average accuracy ships it.
+keyed only on average accuracy ships it. (The expanded recurring-cue list in v2 caused a second,
+smaller regression of the same kind — see Finding 4.)
 
-## Finding 4 — "correct" needs a judge, and the judge needs validation
+## Finding 4 — recurring detection is the weakest signal, by nature
+
+Recurring F1 moved 0.58 → 0.91, and it is deliberately **not** 1.0. Recurrence is a property of a
+*series* of transactions, not a single string, so a system that sees one line at a time has a real
+ceiling. The seed includes adversarial cases that expose it:
+
+- `EQUINOX FITNESS CLUB` and `NYTIMES NYTIMES.COM` are genuine subscriptions with no cue word and no
+  KB entry, so the cue-based detector **misses** them (false negatives).
+- `MONTHLY MARKET SF` is a one-off grocery run at a store named "Monthly Market"; the word *monthly*
+  **wrongly trips** the recurring flag (false positive). This is also the v2 cue-list regression noted
+  above: v1 didn't know the `MONTHLY` cue and got it right.
+
+An earlier version of this eval reported recurring F1 = 1.0, which was a small-n artifact: the labels
+and the detector were built from the same cue list. Adding cases the heuristic cannot solve replaced
+a misleading perfect score with an honest one. The real fix is transaction history, not a cleverer
+string rule.
+
+## Finding 5 — "correct" needs a judge, and the judge needs validation
 
 Exact-match alone would wrongly fail semantically-equal predictions (`Blue Bottle` vs
 `Blue Bottle Coffee`). The merchant-equivalence judge was validated against 24 human-labeled pairs

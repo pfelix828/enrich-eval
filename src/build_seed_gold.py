@@ -100,6 +100,12 @@ ROWS = [
     ("CASH APP*CASH OUT", 50.00, "Cash App", "TRANSFER_OUT", "TRANSFER_OUT_OTHER_TRANSFER_OUT", False, "hard", "processor_prefix;ambiguous_category", "P2P transfer, not a purchase"),
     ("ZELLE TO J SMITH", 75.00, "Zelle", "TRANSFER_OUT", "TRANSFER_OUT_OTHER_TRANSFER_OUT", False, "hard", "ambiguous_category", "person-to-person transfer"),
     ("VENMO PAYMENT 8885551212", 30.00, "Venmo", "TRANSFER_OUT", "TRANSFER_OUT_OTHER_TRANSFER_OUT", False, "medium", "store_id_noise;ambiguous_category", ""),
+
+    # --- adversarial recurring cases: recurrence is a property of a SERIES, invisible in one string.
+    # These break any cue-or-known-merchant heuristic and stop recurring F1 from being a misleading 1.0.
+    ("EQUINOX FITNESS CLUB", 215.00, "Equinox", "PERSONAL_CARE", "PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS", True, "hard", "hidden_recurring", "real membership but no cue word and merchant not in KB -> detector misses the recurrence (false negative)"),
+    ("NYTIMES NYTIMES.COM", 17.00, "The New York Times", "GENERAL_MERCHANDISE", "GENERAL_MERCHANDISE_BOOKSTORES_AND_NEWSSTANDS", True, "hard", "hidden_recurring", "digital subscription, no cue, unknown merchant -> false negative"),
+    ("MONTHLY MARKET SF", 22.50, "Monthly Market", "FOOD_AND_DRINK", "FOOD_AND_DRINK_GROCERIES", False, "hard", "false_cue", "one-off grocery run at a store literally named 'Monthly Market' -> the word MONTHLY wrongly triggers recurring (false positive)"),
 ]
 
 FIELDNAMES = [
