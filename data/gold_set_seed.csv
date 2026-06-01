@@ -1,0 +1,53 @@
+id,raw_descriptor,amount,gold_merchant,gold_primary,gold_detailed,gold_is_recurring,difficulty,pattern_tags,provenance,notes
+seed_001,Netflix,15.49,Netflix,ENTERTAINMENT,ENTERTAINMENT_TV_AND_MOVIES,true,easy,clean;recurring_cue,synthetic_descriptor_real_merchant,canonical subscription
+seed_002,SPOTIFY USA,11.99,Spotify,ENTERTAINMENT,ENTERTAINMENT_MUSIC_AND_AUDIO,true,easy,allcaps_truncated;recurring_cue,synthetic_descriptor_real_merchant,
+seed_003,CHEVRON 0094213,52.10,Chevron,TRANSPORTATION,TRANSPORTATION_GAS,false,easy,store_id_noise,synthetic_descriptor_real_merchant,gas pump
+seed_004,TRADER JOE'S #182 SAN RAFAEL CA,84.27,Trader Joe's,FOOD_AND_DRINK,FOOD_AND_DRINK_GROCERIES,false,easy,store_id_noise;city_state_suffix,synthetic_descriptor_real_merchant,
+seed_005,SHELL OIL 5742 BERKELEY CA,41.88,Shell,TRANSPORTATION,TRANSPORTATION_GAS,false,easy,store_id_noise;city_state_suffix,synthetic_descriptor_real_merchant,
+seed_006,SQ *BLUE BOTTLE COFFEE OAKLAND CA,6.75,Blue Bottle Coffee,FOOD_AND_DRINK,FOOD_AND_DRINK_COFFEE,false,medium,processor_prefix;city_state_suffix,synthetic_descriptor_real_merchant,Square in front of coffee
+seed_007,TST* TARTINE BAKERY SAN FRANCISC,18.40,Tartine Bakery,FOOD_AND_DRINK,FOOD_AND_DRINK_RESTAURANT,false,medium,processor_prefix;allcaps_truncated,synthetic_descriptor_real_merchant,"Toast prefix, truncated city"
+seed_008,SQ *RAINBOW NAILS & SPA,45.00,Rainbow Nails & Spa,PERSONAL_CARE,PERSONAL_CARE_HAIR_AND_BEAUTY,false,medium,processor_prefix,synthetic_descriptor_real_merchant,
+seed_009,PYPL *STEAMGAMES 4029357733,29.99,Steam,ENTERTAINMENT,ENTERTAINMENT_VIDEO_GAMES,false,hard,processor_prefix;store_id_noise,synthetic_descriptor_real_merchant,PayPal wraps Steam; phone-like ref id
+seed_010,SP CHECKOUT* ALLBIRDS,98.00,Allbirds,GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_CLOTHING_AND_ACCESSORIES,false,medium,processor_prefix,synthetic_descriptor_real_merchant,Stripe checkout
+seed_011,DD *DOORDASH SUSHIYA,37.62,DoorDash,FOOD_AND_DRINK,FOOD_AND_DRINK_RESTAURANT,false,hard,aggregator_masked;processor_prefix,synthetic_descriptor_real_merchant,true merchant Sushiya unrecoverable as brand
+seed_012,UBER EATS,24.10,Uber Eats,FOOD_AND_DRINK,FOOD_AND_DRINK_RESTAURANT,false,hard,aggregator_masked,synthetic_descriptor_real_merchant,
+seed_013,PAYPAL *JOHNSDELI 4029357733,13.25,PayPal,FOOD_AND_DRINK,FOOD_AND_DRINK_OTHER_FOOD_AND_DRINK,false,hard,aggregator_masked;processor_prefix;store_id_noise,synthetic_descriptor_real_merchant,small unknown merchant behind PayPal
+seed_014,SQ *SQ *FARMERS MARKET,22.00,Square,FOOD_AND_DRINK,FOOD_AND_DRINK_GROCERIES,false,hard,aggregator_masked;processor_prefix,synthetic_descriptor_real_merchant,"generic Square seller, no brand"
+seed_015,GRUBHUB*HALAL GUYS,28.90,Grubhub,FOOD_AND_DRINK,FOOD_AND_DRINK_RESTAURANT,false,hard,aggregator_masked;processor_prefix,synthetic_descriptor_real_merchant,
+seed_016,AMZN MKTP US*RT4G88H13,41.99,Amazon,GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_ONLINE_MARKETPLACES,false,medium,allcaps_truncated;store_id_noise,synthetic_descriptor_real_merchant,"marketplace, not superstore"
+seed_017,AMAZON.COM*2K9X10 AMZN.COM/BILL WA,12.34,Amazon,GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_ONLINE_MARKETPLACES,false,medium,store_id_noise;city_state_suffix,synthetic_descriptor_real_merchant,
+seed_018,Amazon Prime*9G2K1,14.99,Amazon Prime,GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_ONLINE_MARKETPLACES,true,hard,store_id_noise;recurring_cue;ambiguous_category,synthetic_descriptor_real_merchant,Prime membership is recurring; some label entertainment
+seed_019,PRIME VIDEO*8H2L4,8.99,Amazon Prime Video,ENTERTAINMENT,ENTERTAINMENT_TV_AND_MOVIES,true,hard,store_id_noise;recurring_cue;ambiguous_category,synthetic_descriptor_real_merchant,Prime Video vs Prime membership boundary
+seed_020,TARGET 00027841 NOVATO CA,119.46,Target,GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_SUPERSTORES,false,medium,store_id_noise;city_state_suffix,synthetic_descriptor_real_merchant,"superstore, not grocery"
+seed_021,WAL-MART #5260,63.20,Walmart,GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_SUPERSTORES,false,medium,store_id_noise,synthetic_descriptor_real_merchant,
+seed_022,COSTCO WHSE #0476,210.55,Costco,GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_SUPERSTORES,false,medium,store_id_noise;ambiguous_category,synthetic_descriptor_real_merchant,warehouse club; some expect groceries
+seed_023,SAFEWAY #1199 MILL VALLEY CA,77.31,Safeway,FOOD_AND_DRINK,FOOD_AND_DRINK_GROCERIES,false,easy,store_id_noise;city_state_suffix,synthetic_descriptor_real_merchant,
+seed_024,STARBUCKS STORE 04471,5.65,Starbucks,FOOD_AND_DRINK,FOOD_AND_DRINK_COFFEE,false,medium,store_id_noise;ambiguous_category,synthetic_descriptor_real_merchant,"coffee, not fast food"
+seed_025,MCDONALD'S F12345 SAN JOSE CA,9.41,McDonald's,FOOD_AND_DRINK,FOOD_AND_DRINK_FAST_FOOD,false,easy,store_id_noise;city_state_suffix,synthetic_descriptor_real_merchant,
+seed_026,CHIPOTLE 2487,13.85,Chipotle,FOOD_AND_DRINK,FOOD_AND_DRINK_FAST_FOOD,false,medium,store_id_noise;ambiguous_category,synthetic_descriptor_real_merchant,fast-casual sits between fast food and restaurant
+seed_027,PEET'S COFFEE #03311,4.95,Peet's Coffee,FOOD_AND_DRINK,FOOD_AND_DRINK_COFFEE,false,easy,store_id_noise,synthetic_descriptor_real_merchant,
+seed_028,UBER TRIP HELP.UBER.COM,18.73,Uber,TRANSPORTATION,TRANSPORTATION_TAXIS_AND_RIDE_SHARES,false,medium,ambiguous_category,synthetic_descriptor_real_merchant,Uber rides vs Uber Eats split
+seed_029,LYFT *RIDE WED 2PM,12.40,Lyft,TRANSPORTATION,TRANSPORTATION_TAXIS_AND_RIDE_SHARES,false,easy,processor_prefix,synthetic_descriptor_real_merchant,
+seed_030,LIME*RIDE SAN FRANCISCO CA,4.50,Lime,TRANSPORTATION,TRANSPORTATION_BIKES_AND_SCOOTERS,false,medium,processor_prefix;city_state_suffix,synthetic_descriptor_real_merchant,
+seed_031,BART-POWELL ST FARE,4.95,BART,TRANSPORTATION,TRANSPORTATION_PUBLIC_TRANSIT,false,medium,allcaps_truncated,synthetic_descriptor_real_merchant,"regional transit, lesser-known brand"
+seed_032,DROPBOX*9X8K2L,11.99,Dropbox,GENERAL_SERVICES,GENERAL_SERVICES_OTHER_GENERAL_SERVICES,true,hard,store_id_noise;recurring_cue;ambiguous_category,synthetic_descriptor_real_merchant,cloud storage lands in services-other
+seed_033,APPLE.COM/BILL 866-712-7753,2.99,Apple,GENERAL_SERVICES,GENERAL_SERVICES_OTHER_GENERAL_SERVICES,true,hard,store_id_noise;recurring_cue;ambiguous_category,synthetic_descriptor_real_merchant,iCloud/app sub; could be many detailed buckets
+seed_034,CLAUDE.AI SUBSCRIPTION,20.00,Anthropic,GENERAL_SERVICES,GENERAL_SERVICES_OTHER_GENERAL_SERVICES,true,hard,recurring_cue;ambiguous_category,synthetic_descriptor_real_merchant,AI SaaS; brand vs product name gap
+seed_035,PLANET FIT CLUB FEES 8005551212,24.99,Planet Fitness,PERSONAL_CARE,PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS,true,medium,allcaps_truncated;store_id_noise;recurring_cue,synthetic_descriptor_real_merchant,
+seed_036,PG&E WEB ONLINE PMT,142.07,PG&E,RENT_AND_UTILITIES,RENT_AND_UTILITIES_GAS_AND_ELECTRICITY,true,medium,allcaps_truncated;recurring_cue,synthetic_descriptor_real_merchant,
+seed_037,COMCAST / XFINITY,89.00,Xfinity,RENT_AND_UTILITIES,RENT_AND_UTILITIES_INTERNET_AND_CABLE,true,medium,ambiguous_category;recurring_cue,synthetic_descriptor_real_merchant,Comcast vs Xfinity brand naming
+seed_038,VERIZON WIRELESS PMT RECUR,95.43,Verizon,RENT_AND_UTILITIES,RENT_AND_UTILITIES_TELEPHONE,true,easy,allcaps_truncated;recurring_cue,synthetic_descriptor_real_merchant,
+seed_039,TOYOTA FIN SVC AUTOPAY,412.00,Toyota Financial Services,LOAN_PAYMENTS,LOAN_PAYMENTS_CAR_PAYMENT,true,medium,allcaps_truncated;recurring_cue,synthetic_descriptor_real_merchant,
+seed_040,NELNET STUDENT LOAN,268.00,Nelnet,LOAN_PAYMENTS,LOAN_PAYMENTS_STUDENT_LOAN_PAYMENT,true,medium,recurring_cue,synthetic_descriptor_real_merchant,
+seed_041,RENT CAFE EPAY PROPERTYMGMT,2850.00,RentCafe,RENT_AND_UTILITIES,RENT_AND_UTILITIES_RENT,true,hard,allcaps_truncated;recurring_cue;ambiguous_category,synthetic_descriptor_real_merchant,"payment portal, not the landlord brand"
+seed_042,CVS/PHARMACY #04412 SAN RAFAEL,23.18,CVS Pharmacy,MEDICAL,MEDICAL_PHARMACIES_AND_SUPPLEMENTS,false,easy,store_id_noise;city_state_suffix,synthetic_descriptor_real_merchant,
+seed_043,MARIN DENTAL CARE LLC,180.00,Marin Dental Care,MEDICAL,MEDICAL_DENTAL_CARE,false,medium,clean,synthetic_descriptor_real_merchant,"local provider, no national brand"
+seed_044,GEICO *AUTO 8006861234,121.50,GEICO,GENERAL_SERVICES,GENERAL_SERVICES_INSURANCE,true,medium,processor_prefix;store_id_noise;recurring_cue,synthetic_descriptor_real_merchant,
+seed_045,UNITED 0162334451288 UNITED.COM,412.20,United Airlines,TRAVEL,TRAVEL_FLIGHTS,false,medium,store_id_noise,synthetic_descriptor_real_merchant,ticket number noise
+seed_046,MARRIOTT SAN FRANCISCO,289.00,Marriott,TRAVEL,TRAVEL_LODGING,false,easy,city_state_suffix,synthetic_descriptor_real_merchant,
+seed_047,AIRBNB * HMXYZ123,540.00,Airbnb,TRAVEL,TRAVEL_LODGING,false,medium,processor_prefix;store_id_noise,synthetic_descriptor_real_merchant,
+seed_048,POS DEBIT 0471 9TH ST,7.25,Unknown,GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE,false,hard,aggregator_masked;store_id_noise;ambiguous_category,synthetic_descriptor_real_merchant,no merchant recoverable; address only
+seed_049,SQ *,3.00,Square,GENERAL_MERCHANDISE,GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE,false,hard,aggregator_masked;processor_prefix,synthetic_descriptor_real_merchant,empty Square descriptor
+seed_050,CASH APP*CASH OUT,50.00,Cash App,TRANSFER_OUT,TRANSFER_OUT_OTHER_TRANSFER_OUT,false,hard,processor_prefix;ambiguous_category,synthetic_descriptor_real_merchant,"P2P transfer, not a purchase"
+seed_051,ZELLE TO J SMITH,75.00,Zelle,TRANSFER_OUT,TRANSFER_OUT_OTHER_TRANSFER_OUT,false,hard,ambiguous_category,synthetic_descriptor_real_merchant,person-to-person transfer
+seed_052,VENMO PAYMENT 8885551212,30.00,Venmo,TRANSFER_OUT,TRANSFER_OUT_OTHER_TRANSFER_OUT,false,medium,store_id_noise;ambiguous_category,synthetic_descriptor_real_merchant,

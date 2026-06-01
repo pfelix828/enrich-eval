@@ -1,0 +1,21 @@
+{
+  "n_pairs": 24,
+  "agreement": 0.9167,
+  "cohen_kappa": 0.8333,
+  "disagreements": [
+    {
+      "pred_merchant": "Comcast",
+      "gold_merchant": "Xfinity",
+      "human": true,
+      "judge": false,
+      "note": "parent company vs consumer brand"
+    },
+    {
+      "pred_merchant": "Bay Area Rapid Transit",
+      "gold_merchant": "BART",
+      "human": true,
+      "judge": false,
+      "note": "full name vs acronym"
+    }
+  ]
+}

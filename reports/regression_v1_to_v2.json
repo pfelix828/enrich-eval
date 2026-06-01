@@ -1,0 +1,110 @@
+{
+  "old": 1,
+  "new": 2,
+  "fields": {
+    "merchant_correct": {
+      "acc_old": 0.5385,
+      "acc_new": 0.8654,
+      "delta": 0.3269,
+      "improved": 18,
+      "regressed": 1
+    },
+    "primary_correct": {
+      "acc_old": 0.6154,
+      "acc_new": 0.9231,
+      "delta": 0.3077,
+      "improved": 17,
+      "regressed": 1
+    },
+    "detailed_correct": {
+      "acc_old": 0.6154,
+      "acc_new": 0.9231,
+      "delta": 0.3077,
+      "improved": 17,
+      "regressed": 1
+    },
+    "recurring_correct": {
+      "acc_old": 0.8462,
+      "acc_new": 1.0,
+      "delta": 0.1538,
+      "improved": 8,
+      "regressed": 0
+    }
+  },
+  "regressions": [
+    {
+      "id": "seed_009",
+      "field": "merchant_correct",
+      "raw_descriptor": "PYPL *STEAMGAMES 4029357733",
+      "pattern_tags": "processor_prefix;store_id_noise",
+      "old": "Steam / ENTERTAINMENT",
+      "new": "PayPal / GENERAL_MERCHANDISE"
+    },
+    {
+      "id": "seed_009",
+      "field": "primary_correct",
+      "raw_descriptor": "PYPL *STEAMGAMES 4029357733",
+      "pattern_tags": "processor_prefix;store_id_noise",
+      "old": "Steam / ENTERTAINMENT",
+      "new": "PayPal / GENERAL_MERCHANDISE"
+    },
+    {
+      "id": "seed_009",
+      "field": "detailed_correct",
+      "raw_descriptor": "PYPL *STEAMGAMES 4029357733",
+      "pattern_tags": "processor_prefix;store_id_noise",
+      "old": "Steam / ENTERTAINMENT",
+      "new": "PayPal / GENERAL_MERCHANDISE"
+    }
+  ],
+  "by_pattern_tag_detailed": {
+    "aggregator_masked": {
+      "n": 7,
+      "detailed_old": 0.429,
+      "detailed_new": 0.857,
+      "delta": 0.429
+    },
+    "allcaps_truncated": {
+      "n": 9,
+      "detailed_old": 0.556,
+      "detailed_new": 0.889,
+      "delta": 0.333
+    },
+    "ambiguous_category": {
+      "n": 15,
+      "detailed_old": 0.467,
+      "detailed_new": 0.867,
+      "delta": 0.4
+    },
+    "city_state_suffix": {
+      "n": 10,
+      "detailed_old": 0.9,
+      "detailed_new": 1.0,
+      "delta": 0.1
+    },
+    "clean": {
+      "n": 2,
+      "detailed_old": 1.0,
+      "detailed_new": 1.0,
+      "delta": 0.0
+    },
+    "processor_prefix": {
+      "n": 15,
+      "detailed_old": 0.6,
+      "detailed_new": 0.867,
+      "delta": 0.267
+    },
+    "recurring_cue": {
+      "n": 15,
+      "detailed_old": 0.333,
+      "detailed_new": 0.867,
+      "delta": 0.533
+    },
+    "store_id_noise": {
+      "n": 26,
+      "detailed_old": 0.731,
+      "detailed_new": 0.923,
+      "delta": 0.192
+    }
+  }
+}

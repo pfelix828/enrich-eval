@@ -1,0 +1,639 @@
+{
+  "overall": {
+    "n": 52,
+    "merchant_exact_acc": 0.8654,
+    "merchant_correct_acc": 0.8654,
+    "primary_acc": 0.9231,
+    "detailed_acc": 0.9231,
+    "merchant_coverage": 0.8654,
+    "recurring": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "tp": 15,
+      "fp": 0,
+      "fn": 0,
+      "support": 15
+    },
+    "ece_merchant": 0.1625,
+    "reliability": [
+      {
+        "bin": 0,
+        "lo": 0.0,
+        "hi": 0.1,
+        "n": 0,
+        "avg_conf": null,
+        "accuracy": null
+      },
+      {
+        "bin": 1,
+        "lo": 0.1,
+        "hi": 0.2,
+        "n": 0,
+        "avg_conf": null,
+        "accuracy": null
+      },
+      {
+        "bin": 2,
+        "lo": 0.2,
+        "hi": 0.3,
+        "n": 3,
+        "avg_conf": 0.2,
+        "accuracy": 0.3333
+      },
+      {
+        "bin": 3,
+        "lo": 0.3,
+        "hi": 0.4,
+        "n": 0,
+        "avg_conf": null,
+        "accuracy": null
+      },
+      {
+        "bin": 4,
+        "lo": 0.4,
+        "hi": 0.5,
+        "n": 4,
+        "avg_conf": 0.4,
+        "accuracy": 0.0
+      },
+      {
+        "bin": 5,
+        "lo": 0.5,
+        "hi": 0.6,
+        "n": 0,
+        "avg_conf": null,
+        "accuracy": null
+      },
+      {
+        "bin": 6,
+        "lo": 0.6,
+        "hi": 0.7,
+        "n": 8,
+        "avg_conf": 0.6,
+        "accuracy": 0.875
+      },
+      {
+        "bin": 7,
+        "lo": 0.7,
+        "hi": 0.8,
+        "n": 0,
+        "avg_conf": null,
+        "accuracy": null
+      },
+      {
+        "bin": 8,
+        "lo": 0.8,
+        "hi": 0.9,
+        "n": 24,
+        "avg_conf": 0.85,
+        "accuracy": 1.0
+      },
+      {
+        "bin": 9,
+        "lo": 0.9,
+        "hi": 1.0,
+        "n": 13,
+        "avg_conf": 0.95,
+        "accuracy": 1.0
+      }
+    ]
+  },
+  "by_difficulty": {
+    "easy": {
+      "n": 12,
+      "merchant_exact_acc": 1.0,
+      "merchant_correct_acc": 1.0,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "support": 3
+      }
+    },
+    "hard": {
+      "n": 16,
+      "merchant_exact_acc": 0.6875,
+      "merchant_correct_acc": 0.6875,
+      "primary_acc": 0.75,
+      "detailed_acc": 0.75,
+      "merchant_coverage": 0.6875,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "support": 6
+      }
+    },
+    "medium": {
+      "n": 24,
+      "merchant_exact_acc": 0.9167,
+      "merchant_correct_acc": 0.9167,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 0.9167,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "support": 6
+      }
+    }
+  },
+  "by_pattern_tag": {
+    "aggregator_masked": {
+      "n": 7,
+      "merchant_exact_acc": 0.7143,
+      "merchant_correct_acc": 0.7143,
+      "primary_acc": 0.8571,
+      "detailed_acc": 0.8571,
+      "merchant_coverage": 0.5714,
+      "recurring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0
+      }
+    },
+    "allcaps_truncated": {
+      "n": 9,
+      "merchant_exact_acc": 0.8889,
+      "merchant_correct_acc": 0.8889,
+      "primary_acc": 0.8889,
+      "detailed_acc": 0.8889,
+      "merchant_coverage": 0.8889,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "support": 6
+      }
+    },
+    "ambiguous_category": {
+      "n": 15,
+      "merchant_exact_acc": 0.8667,
+      "merchant_correct_acc": 0.8667,
+      "primary_acc": 0.8667,
+      "detailed_acc": 0.8667,
+      "merchant_coverage": 0.8,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "support": 7
+      }
+    },
+    "city_state_suffix": {
+      "n": 10,
+      "merchant_exact_acc": 1.0,
+      "merchant_correct_acc": 1.0,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0
+      }
+    },
+    "clean": {
+      "n": 2,
+      "merchant_exact_acc": 0.5,
+      "merchant_correct_acc": 0.5,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 0.5,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "support": 1
+      }
+    },
+    "processor_prefix": {
+      "n": 15,
+      "merchant_exact_acc": 0.7333,
+      "merchant_correct_acc": 0.7333,
+      "primary_acc": 0.8667,
+      "detailed_acc": 0.8667,
+      "merchant_coverage": 0.8,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "support": 1
+      }
+    },
+    "recurring_cue": {
+      "n": 15,
+      "merchant_exact_acc": 0.8667,
+      "merchant_correct_acc": 0.8667,
+      "primary_acc": 0.8667,
+      "detailed_acc": 0.8667,
+      "merchant_coverage": 0.8667,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 15,
+        "fp": 0,
+        "fn": 0,
+        "support": 15
+      }
+    },
+    "store_id_noise": {
+      "n": 26,
+      "merchant_exact_acc": 0.9615,
+      "merchant_correct_acc": 0.9615,
+      "primary_acc": 0.9231,
+      "detailed_acc": 0.9231,
+      "merchant_coverage": 0.9615,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "support": 6
+      }
+    }
+  },
+  "by_primary": {
+    "ENTERTAINMENT": {
+      "n": 4,
+      "merchant_exact_acc": 0.75,
+      "merchant_correct_acc": 0.75,
+      "primary_acc": 0.75,
+      "detailed_acc": 0.75,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "support": 3
+      }
+    },
+    "FOOD_AND_DRINK": {
+      "n": 13,
+      "merchant_exact_acc": 0.9231,
+      "merchant_correct_acc": 0.9231,
+      "primary_acc": 0.9231,
+      "detailed_acc": 0.9231,
+      "merchant_coverage": 0.9231,
+      "recurring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0
+      }
+    },
+    "GENERAL_MERCHANDISE": {
+      "n": 9,
+      "merchant_exact_acc": 0.8889,
+      "merchant_correct_acc": 0.8889,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 0.7778,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "support": 1
+      }
+    },
+    "GENERAL_SERVICES": {
+      "n": 4,
+      "merchant_exact_acc": 0.75,
+      "merchant_correct_acc": 0.75,
+      "primary_acc": 0.75,
+      "detailed_acc": 0.75,
+      "merchant_coverage": 0.75,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "support": 4
+      }
+    },
+    "LOAN_PAYMENTS": {
+      "n": 2,
+      "merchant_exact_acc": 1.0,
+      "merchant_correct_acc": 1.0,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "support": 2
+      }
+    },
+    "MEDICAL": {
+      "n": 2,
+      "merchant_exact_acc": 0.5,
+      "merchant_correct_acc": 0.5,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 0.5,
+      "recurring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0
+      }
+    },
+    "PERSONAL_CARE": {
+      "n": 2,
+      "merchant_exact_acc": 0.5,
+      "merchant_correct_acc": 0.5,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 0.5,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "support": 1
+      }
+    },
+    "RENT_AND_UTILITIES": {
+      "n": 4,
+      "merchant_exact_acc": 0.75,
+      "merchant_correct_acc": 0.75,
+      "primary_acc": 0.75,
+      "detailed_acc": 0.75,
+      "merchant_coverage": 0.75,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "support": 4
+      }
+    },
+    "TRANSFER_OUT": {
+      "n": 3,
+      "merchant_exact_acc": 1.0,
+      "merchant_correct_acc": 1.0,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0
+      }
+    },
+    "TRANSPORTATION": {
+      "n": 6,
+      "merchant_exact_acc": 1.0,
+      "merchant_correct_acc": 1.0,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0
+      }
+    },
+    "TRAVEL": {
+      "n": 3,
+      "merchant_exact_acc": 1.0,
+      "merchant_correct_acc": 1.0,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0
+      }
+    }
+  },
+  "by_amount_bucket": {
+    "$10-50": {
+      "n": 22,
+      "merchant_exact_acc": 0.8182,
+      "merchant_correct_acc": 0.8182,
+      "primary_acc": 0.8636,
+      "detailed_acc": 0.8636,
+      "merchant_coverage": 0.8636,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "support": 6
+      }
+    },
+    "$50-200": {
+      "n": 13,
+      "merchant_exact_acc": 0.9231,
+      "merchant_correct_acc": 0.9231,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 0.9231,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "support": 4
+      }
+    },
+    "<$10": {
+      "n": 10,
+      "merchant_exact_acc": 0.9,
+      "merchant_correct_acc": 0.9,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 0.8,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "support": 2
+      }
+    },
+    ">$200": {
+      "n": 7,
+      "merchant_exact_acc": 0.8571,
+      "merchant_correct_acc": 0.8571,
+      "primary_acc": 0.8571,
+      "detailed_acc": 0.8571,
+      "merchant_coverage": 0.8571,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "support": 3
+      }
+    }
+  },
+  "by_match_type": {
+    "aggregator": {
+      "n": 8,
+      "merchant_exact_acc": 0.875,
+      "merchant_correct_acc": 0.875,
+      "primary_acc": 0.75,
+      "detailed_acc": 0.75,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "support": 0
+      }
+    },
+    "exact": {
+      "n": 13,
+      "merchant_exact_acc": 1.0,
+      "merchant_correct_acc": 1.0,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "support": 5
+      }
+    },
+    "fallback": {
+      "n": 3,
+      "merchant_exact_acc": 0.3333,
+      "merchant_correct_acc": 0.3333,
+      "primary_acc": 0.6667,
+      "detailed_acc": 0.6667,
+      "merchant_coverage": 0.0,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "support": 1
+      }
+    },
+    "keyword": {
+      "n": 4,
+      "merchant_exact_acc": 0.0,
+      "merchant_correct_acc": 0.0,
+      "primary_acc": 0.75,
+      "detailed_acc": 0.75,
+      "merchant_coverage": 0.0,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "support": 1
+      }
+    },
+    "normalized": {
+      "n": 24,
+      "merchant_exact_acc": 1.0,
+      "merchant_correct_acc": 1.0,
+      "primary_acc": 1.0,
+      "detailed_acc": 1.0,
+      "merchant_coverage": 1.0,
+      "recurring": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "support": 8
+      }
+    }
+  }
+}

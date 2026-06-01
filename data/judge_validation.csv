@@ -1,0 +1,25 @@
+pred_merchant,gold_merchant,human_equivalent,note
+Blue Bottle,Blue Bottle Coffee,true,trailing category word dropped
+Peets,Peet's Coffee,true,apostrophe + category word
+Trader Joes,Trader Joe's,true,apostrophe only
+Wal-Mart,Walmart,true,punctuation/spacing variant
+Amazon Mktp,Amazon,true,abbreviation of same brand
+Starbucks Coffee,Starbucks,true,added generic category word
+CVS,CVS Pharmacy,true,acronym vs full
+Chevron Gas,Chevron,true,added category word
+McDonalds,McDonald's,true,apostrophe only
+Apple.com,Apple,true,domain vs brand
+Comcast,Xfinity,true,parent company vs consumer brand
+Bay Area Rapid Transit,BART,true,full name vs acronym
+Amazon,Amazon Prime,false,membership product is a distinct entity
+Amazon Prime,Amazon Prime Video,false,streaming product vs membership
+Uber,Uber Eats,false,rides vs food delivery is a different category
+Apple,Apple Music,false,parent brand vs specific subscription
+PayPal,Steam,false,aggregator masking the real merchant
+DoorDash,Sushiya,false,platform vs underlying restaurant
+Square,Farmers Market,false,generic processor vs specific seller
+Shell,Chevron,false,different gas brands
+Lyft,Uber,false,different rideshare companies
+Costco,Target,false,different retailers
+Venmo,Zelle,false,different P2P apps
+Grubhub,Halal Guys,false,platform vs underlying restaurant
