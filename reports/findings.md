@@ -14,7 +14,9 @@ base, more processor-prefix handling, and richer recurring cues) lifted every he
 | Merchant accuracy | 51% | 82% |
 | Primary category | 62% | 91% |
 | Detailed category | 60% | 89% |
-| Recurring F1 | 0.58 | 0.91 |
+
+(Recurring detection is intentionally left out of this headline table — see Finding 4 for why it
+isn't a meaningful single-transaction score.)
 
 But the averages hide five findings that actually shape a roadmap.
 
@@ -51,11 +53,14 @@ a specific, customer-visible case. A release gate keyed on per-row regressions c
 keyed only on average accuracy ships it. (The expanded recurring-cue list in v2 caused a second,
 smaller regression of the same kind — see Finding 4.)
 
-## Finding 4 — recurring detection is the weakest signal, by nature
+## Finding 4 — recurring detection isn't a meaningful single-transaction metric
 
-Recurring F1 moved 0.58 → 0.91, and it is deliberately **not** 1.0. Recurrence is a property of a
-*series* of transactions, not a single string, so a system that sees one line at a time has a real
-ceiling. The seed includes adversarial cases that expose it:
+Recurrence is a property of a *series* of transactions, not a single string, so a system — or an
+eval — that sees one line at a time cannot honestly measure it. That is why recurring is kept out of
+the headline table: any F1 I quoted would mostly reflect how many cue-less cases I chose to put in the
+seed (recall is roughly *easy positives / all positives* by construction), not real performance. It is
+reported here as a failure-mode demonstration, not a score. The seed includes adversarial cases that
+expose the ceiling:
 
 - `EQUINOX FITNESS CLUB` and `NYTIMES NYTIMES.COM` are genuine subscriptions with no cue word and no
   KB entry, so the cue-based detector **misses** them (false negatives).

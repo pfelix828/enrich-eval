@@ -61,8 +61,8 @@ if page == "Overview":
         o1, o2 = m1["overall"], m2["overall"]
         c = st.columns(4)
         c[0].metric("Merchant accuracy", f"{o2['merchant_correct_acc']:.0%}", f"{o2['merchant_correct_acc']-o1['merchant_correct_acc']:+.0%} vs v1")
-        c[1].metric("Detailed category", f"{o2['detailed_acc']:.0%}", f"{o2['detailed_acc']-o1['detailed_acc']:+.0%} vs v1")
-        c[2].metric("Recurring F1", f"{o2['recurring']['f1']:.2f}")
+        c[1].metric("Primary category", f"{o2['primary_acc']:.0%}", f"{o2['primary_acc']-o1['primary_acc']:+.0%} vs v1")
+        c[2].metric("Detailed category", f"{o2['detailed_acc']:.0%}", f"{o2['detailed_acc']-o1['detailed_acc']:+.0%} vs v1")
         c[3].metric("Merchant ECE", f"{o2['ece_merchant']:.3f}", help="Expected calibration error; lower is better")
     fig("accuracy_v1_v2.png")
     st.subheader("Try the enricher live")

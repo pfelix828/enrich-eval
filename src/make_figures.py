@@ -33,19 +33,21 @@ def _load(name):
 
 
 def fig_accuracy():
+    # Recurring is deliberately excluded here: it's a property of a transaction SERIES, not a single
+    # string, so its score is not a meaningful single-transaction metric. It lives in findings.md as a
+    # failure-mode demonstration, not a headline number.
     m1, m2 = _load("metrics_v1.json")["overall"], _load("metrics_v2.json")["overall"]
     fields = ["merchant_correct_acc", "primary_acc", "detailed_acc"]
     labels = ["Merchant", "Primary cat", "Detailed cat"]
-    v1 = [m1[f] for f in fields] + [m1["recurring"]["f1"]]
-    v2 = [m2[f] for f in fields] + [m2["recurring"]["f1"]]
-    labels += ["Recurring F1"]
+    v1 = [m1[f] for f in fields]
+    v2 = [m2[f] for f in fields]
     x = range(len(labels))
     fig, ax = plt.subplots(figsize=(7, 4))
     ax.bar([i - 0.2 for i in x], v1, width=0.4, label="v1 (baseline)", color="#bbbbbb")
     ax.bar([i + 0.2 for i in x], v2, width=0.4, label="v2 (improved)", color="#2a7ae2")
     ax.set_xticks(list(x)); ax.set_xticklabels(labels)
-    ax.set_ylim(0, 1.05); ax.set_ylabel("Accuracy / F1")
-    ax.set_title("Enrichment quality: v1 vs v2")
+    ax.set_ylim(0, 1.05); ax.set_ylabel("Accuracy")
+    ax.set_title("Merchant & category quality: v1 vs v2")
     for i, (a, b) in enumerate(zip(v1, v2)):
         ax.text(i - 0.2, a + 0.02, f"{a:.2f}", ha="center", fontsize=8)
         ax.text(i + 0.2, b + 0.02, f"{b:.2f}", ha="center", fontsize=8)
