@@ -1,0 +1,103 @@
+{
+ "ece_v2": 0.1536,
+ "reliability_v2": [
+  {
+   "bin": 2,
+   "lo": 0.2,
+   "hi": 0.3,
+   "n": 5,
+   "avg_conf": 0.2,
+   "accuracy": 0.2
+  },
+  {
+   "bin": 4,
+   "lo": 0.4,
+   "hi": 0.5,
+   "n": 5,
+   "avg_conf": 0.4,
+   "accuracy": 0.0
+  },
+  {
+   "bin": 6,
+   "lo": 0.6,
+   "hi": 0.7,
+   "n": 8,
+   "avg_conf": 0.6,
+   "accuracy": 0.875
+  },
+  {
+   "bin": 8,
+   "lo": 0.8,
+   "hi": 0.9,
+   "n": 24,
+   "avg_conf": 0.85,
+   "accuracy": 1.0
+  },
+  {
+   "bin": 9,
+   "lo": 0.9,
+   "hi": 1.0,
+   "n": 13,
+   "avg_conf": 0.95,
+   "accuracy": 1.0
+  }
+ ],
+ "match_type_profile_v2": [
+  {
+   "match_type": "normalized",
+   "n": 24,
+   "mean_confidence": 0.85,
+   "accuracy": 1.0
+  },
+  {
+   "match_type": "exact",
+   "n": 13,
+   "mean_confidence": 0.95,
+   "accuracy": 1.0
+  },
+  {
+   "match_type": "aggregator",
+   "n": 8,
+   "mean_confidence": 0.6,
+   "accuracy": 0.875
+  },
+  {
+   "match_type": "fallback",
+   "n": 5,
+   "mean_confidence": 0.2,
+   "accuracy": 0.2
+  },
+  {
+   "match_type": "keyword",
+   "n": 5,
+   "mean_confidence": 0.4,
+   "accuracy": 0.0
+  }
+ ],
+ "match_type_profile_v1": [
+  {
+   "match_type": "fallback",
+   "n": 23,
+   "mean_confidence": 0.2,
+   "accuracy": 0.043
+  },
+  {
+   "match_type": "normalized",
+   "n": 18,
+   "mean_confidence": 0.85,
+   "accuracy": 1.0
+  },
+  {
+   "match_type": "exact",
+   "n": 9,
+   "mean_confidence": 0.95,
+   "accuracy": 1.0
+  },
+  {
+   "match_type": "keyword",
+   "n": 5,
+   "mean_confidence": 0.4,
+   "accuracy": 0.0
+  }
+ ]
+}

@@ -1,0 +1,305 @@
+[
+ {
+  "complaint": "The merchant names my users see are messy",
+  "version": 2,
+  "filter": null,
+  "routed_focus": "merchant",
+  "focus_label": "merchant-name",
+  "population": 55,
+  "scope_n": 55,
+  "errors": 10,
+  "accuracy_in_scope": 0.8182,
+  "clusters": [
+   {
+    "cause": "coverage_gap",
+    "n_errors": 9,
+    "share_of_errors": 0.9,
+    "mean_confidence": 0.311,
+    "impact_score": 7.3,
+    "examples": [
+     "SQ *RAINBOW NAILS & SPA",
+     "SQ *SQ *FARMERS MARKET",
+     "CLAUDE.AI SUBSCRIPTION"
+    ],
+    "recommendation": "The merchant was not resolved at all (blank/Unknown). This is a knowledge-base coverage gap, not a parsing bug. Add these merchants to the KB or fall back to a cleaned descriptor string rather than emitting nothing.",
+    "rows": [
+     {
+      "descriptor": "SQ *RAINBOW NAILS & SPA",
+      "gold_merchant": "Rainbow Nails & Spa",
+      "pred_merchant": "Unknown",
+      "gold_category": "PERSONAL_CARE / PERSONAL_CARE_HAIR_AND_BEAUTY",
+      "pred_category": "PERSONAL_CARE / PERSONAL_CARE_HAIR_AND_BEAUTY",
+      "gold_recurring": false,
+      "pred_recurring": false,
+      "confidence": 0.4
+     },
+     {
+      "descriptor": "SQ *SQ *FARMERS MARKET",
+      "gold_merchant": "Square",
+      "pred_merchant": "Unknown",
+      "gold_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_GROCERIES",
+      "pred_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_GROCERIES",
+      "gold_recurring": false,
+      "pred_recurring": false,
+      "confidence": 0.4
+     },
+     {
+      "descriptor": "CLAUDE.AI SUBSCRIPTION",
+      "gold_merchant": "Anthropic",
+      "pred_merchant": "Unknown",
+      "gold_category": "GENERAL_SERVICES / GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": true,
+      "pred_recurring": true,
+      "confidence": 0.2
+     },
+     {
+      "descriptor": "RENT CAFE EPAY PROPERTYMGMT",
+      "gold_merchant": "RentCafe",
+      "pred_merchant": "Unknown",
+      "gold_category": "RENT_AND_UTILITIES / RENT_AND_UTILITIES_RENT",
+      "pred_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_COFFEE",
+      "gold_recurring": true,
+      "pred_recurring": true,
+      "confidence": 0.4
+     },
+     {
+      "descriptor": "MARIN DENTAL CARE LLC",
+      "gold_merchant": "Marin Dental Care",
+      "pred_merchant": "Unknown",
+      "gold_category": "MEDICAL / MEDICAL_DENTAL_CARE",
+      "pred_category": "MEDICAL / MEDICAL_DENTAL_CARE",
+      "gold_recurring": false,
+      "pred_recurring": false,
+      "confidence": 0.4
+     },
+     {
+      "descriptor": "SQ *",
+      "gold_merchant": "Square",
+      "pred_merchant": "Unknown",
+      "gold_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": false,
+      "pred_recurring": false,
+      "confidence": 0.2
+     },
+     {
+      "descriptor": "EQUINOX FITNESS CLUB",
+      "gold_merchant": "Equinox",
+      "pred_merchant": "Unknown",
+      "gold_category": "PERSONAL_CARE / PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": true,
+      "pred_recurring": false,
+      "confidence": 0.2
+     },
+     {
+      "descriptor": "NYTIMES NYTIMES.COM",
+      "gold_merchant": "The New York Times",
+      "pred_merchant": "Unknown",
+      "gold_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_BOOKSTORES_AND_NEWSSTANDS",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": true,
+      "pred_recurring": false,
+      "confidence": 0.2
+     }
+    ]
+   },
+   {
+    "cause": "processor_prefix",
+    "n_errors": 1,
+    "share_of_errors": 0.1,
+    "mean_confidence": 0.6,
+    "impact_score": 1.1,
+    "examples": [
+     "PYPL *STEAMGAMES 4029357733"
+    ],
+    "recommendation": "A payment-processor prefix is defeating merchant resolution. Extend the prefix-stripping rules to cover these processors before lookup.",
+    "rows": [
+     {
+      "descriptor": "PYPL *STEAMGAMES 4029357733",
+      "gold_merchant": "Steam",
+      "pred_merchant": "PayPal",
+      "gold_category": "ENTERTAINMENT / ENTERTAINMENT_VIDEO_GAMES",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": false,
+      "pred_recurring": false,
+      "confidence": 0.6
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "complaint": "Your categorization is wrong for a lot of my users",
+  "version": 2,
+  "filter": null,
+  "routed_focus": "category",
+  "focus_label": "categorization",
+  "population": 55,
+  "scope_n": 55,
+  "errors": 6,
+  "accuracy_in_scope": 0.8909,
+  "clusters": [
+   {
+    "cause": "coverage_gap",
+    "n_errors": 4,
+    "share_of_errors": 0.667,
+    "mean_confidence": 0.25,
+    "impact_score": 3.0,
+    "examples": [
+     "CLAUDE.AI SUBSCRIPTION",
+     "RENT CAFE EPAY PROPERTYMGMT",
+     "EQUINOX FITNESS CLUB"
+    ],
+    "recommendation": "The merchant was not resolved at all (blank/Unknown). This is a knowledge-base coverage gap, not a parsing bug. Add these merchants to the KB or fall back to a cleaned descriptor string rather than emitting nothing.",
+    "rows": [
+     {
+      "descriptor": "CLAUDE.AI SUBSCRIPTION",
+      "gold_merchant": "Anthropic",
+      "pred_merchant": "Unknown",
+      "gold_category": "GENERAL_SERVICES / GENERAL_SERVICES_OTHER_GENERAL_SERVICES",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": true,
+      "pred_recurring": true,
+      "confidence": 0.2
+     },
+     {
+      "descriptor": "RENT CAFE EPAY PROPERTYMGMT",
+      "gold_merchant": "RentCafe",
+      "pred_merchant": "Unknown",
+      "gold_category": "RENT_AND_UTILITIES / RENT_AND_UTILITIES_RENT",
+      "pred_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_COFFEE",
+      "gold_recurring": true,
+      "pred_recurring": true,
+      "confidence": 0.4
+     },
+     {
+      "descriptor": "EQUINOX FITNESS CLUB",
+      "gold_merchant": "Equinox",
+      "pred_merchant": "Unknown",
+      "gold_category": "PERSONAL_CARE / PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": true,
+      "pred_recurring": false,
+      "confidence": 0.2
+     },
+     {
+      "descriptor": "NYTIMES NYTIMES.COM",
+      "gold_merchant": "The New York Times",
+      "pred_merchant": "Unknown",
+      "gold_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_BOOKSTORES_AND_NEWSSTANDS",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": true,
+      "pred_recurring": false,
+      "confidence": 0.2
+     }
+    ]
+   },
+   {
+    "cause": "aggregator_masked",
+    "n_errors": 1,
+    "share_of_errors": 0.167,
+    "mean_confidence": 0.6,
+    "impact_score": 1.1,
+    "examples": [
+     "PAYPAL *JOHNSDELI 4029357733"
+    ],
+    "recommendation": "True merchant is unrecoverable from the descriptor (a platform masks it). Stop guessing the underlying merchant; label the platform and expose a lower-confidence flag so customers can handle it downstream.",
+    "rows": [
+     {
+      "descriptor": "PAYPAL *JOHNSDELI 4029357733",
+      "gold_merchant": "PayPal",
+      "pred_merchant": "PayPal",
+      "gold_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_OTHER_FOOD_AND_DRINK",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": false,
+      "pred_recurring": false,
+      "confidence": 0.6
+     }
+    ]
+   },
+   {
+    "cause": "processor_prefix",
+    "n_errors": 1,
+    "share_of_errors": 0.167,
+    "mean_confidence": 0.6,
+    "impact_score": 1.1,
+    "examples": [
+     "PYPL *STEAMGAMES 4029357733"
+    ],
+    "recommendation": "A payment-processor prefix is defeating merchant resolution. Extend the prefix-stripping rules to cover these processors before lookup.",
+    "rows": [
+     {
+      "descriptor": "PYPL *STEAMGAMES 4029357733",
+      "gold_merchant": "Steam",
+      "pred_merchant": "PayPal",
+      "gold_category": "ENTERTAINMENT / ENTERTAINMENT_VIDEO_GAMES",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": false,
+      "pred_recurring": false,
+      "confidence": 0.6
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "complaint": "Subscriptions aren't being flagged as recurring",
+  "version": 2,
+  "filter": null,
+  "routed_focus": "recurring",
+  "focus_label": "recurring-detection",
+  "population": 55,
+  "scope_n": 55,
+  "errors": 3,
+  "accuracy_in_scope": 0.9455,
+  "clusters": [
+   {
+    "cause": "coverage_gap",
+    "n_errors": 3,
+    "share_of_errors": 1.0,
+    "mean_confidence": 0.267,
+    "impact_score": 2.3,
+    "examples": [
+     "EQUINOX FITNESS CLUB",
+     "NYTIMES NYTIMES.COM",
+     "MONTHLY MARKET SF"
+    ],
+    "recommendation": "The merchant was not resolved at all (blank/Unknown). This is a knowledge-base coverage gap, not a parsing bug. Add these merchants to the KB or fall back to a cleaned descriptor string rather than emitting nothing.",
+    "rows": [
+     {
+      "descriptor": "EQUINOX FITNESS CLUB",
+      "gold_merchant": "Equinox",
+      "pred_merchant": "Unknown",
+      "gold_category": "PERSONAL_CARE / PERSONAL_CARE_GYMS_AND_FITNESS_CENTERS",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": true,
+      "pred_recurring": false,
+      "confidence": 0.2
+     },
+     {
+      "descriptor": "NYTIMES NYTIMES.COM",
+      "gold_merchant": "The New York Times",
+      "pred_merchant": "Unknown",
+      "gold_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_BOOKSTORES_AND_NEWSSTANDS",
+      "pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+      "gold_recurring": true,
+      "pred_recurring": false,
+      "confidence": 0.2
+     },
+     {
+      "descriptor": "MONTHLY MARKET SF",
+      "gold_merchant": "Monthly Market",
+      "pred_merchant": "Unknown",
+      "gold_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_GROCERIES",
+      "pred_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_GROCERIES",
+      "gold_recurring": false,
+      "pred_recurring": true,
+      "confidence": 0.4
+     }
+    ]
+   }
+  ]
+ }
+]

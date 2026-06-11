@@ -1,0 +1,8 @@
+{
+ "seed_n": 55,
+ "dataNote": "All numbers come from a 55-row seed of synthetic transaction descriptors for real merchants, scored by a deterministic rules enricher. This is a methodology demonstration, not production metrics \u2014 the point is the method, not the magnitude.",
+ "versions": {
+  "v1": "baseline rules enricher",
+  "v2": "v1 + aggregator awareness, fuller merchant knowledge base, more processor prefixes, richer recurring cues"
+ }
+}

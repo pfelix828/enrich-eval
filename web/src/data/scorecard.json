@@ -1,0 +1,570 @@
+{
+ "overall": {
+  "v1": {
+   "n": 55,
+   "merchant_correct_acc": 0.5091,
+   "primary_acc": 0.6182,
+   "detailed_acc": 0.6,
+   "merchant_coverage": 0.4909
+  },
+  "v2": {
+   "n": 55,
+   "merchant_correct_acc": 0.8182,
+   "primary_acc": 0.9091,
+   "detailed_acc": 0.8909,
+   "merchant_coverage": 0.8182
+  }
+ },
+ "by_pattern_tag": {
+  "v1": [
+   {
+    "key": "aggregator_masked",
+    "n": 7,
+    "merchant_acc": 0.1429,
+    "primary_acc": 0.4286,
+    "detailed_acc": 0.4286,
+    "coverage": 0.0
+   },
+   {
+    "key": "allcaps_truncated",
+    "n": 9,
+    "merchant_acc": 0.5556,
+    "primary_acc": 0.5556,
+    "detailed_acc": 0.5556,
+    "coverage": 0.5556
+   },
+   {
+    "key": "ambiguous_category",
+    "n": 15,
+    "merchant_acc": 0.4667,
+    "primary_acc": 0.4667,
+    "detailed_acc": 0.4667,
+    "coverage": 0.4
+   },
+   {
+    "key": "city_state_suffix",
+    "n": 10,
+    "merchant_acc": 0.9,
+    "primary_acc": 0.9,
+    "detailed_acc": 0.9,
+    "coverage": 0.9
+   },
+   {
+    "key": "clean",
+    "n": 2,
+    "merchant_acc": 0.5,
+    "primary_acc": 1.0,
+    "detailed_acc": 1.0,
+    "coverage": 0.5
+   },
+   {
+    "key": "false_cue",
+    "n": 1,
+    "merchant_acc": 0.0,
+    "primary_acc": 1.0,
+    "detailed_acc": 1.0,
+    "coverage": 0.0
+   },
+   {
+    "key": "hidden_recurring",
+    "n": 2,
+    "merchant_acc": 0.0,
+    "primary_acc": 0.5,
+    "detailed_acc": 0.0,
+    "coverage": 0.0
+   },
+   {
+    "key": "processor_prefix",
+    "n": 15,
+    "merchant_acc": 0.4,
+    "primary_acc": 0.6,
+    "detailed_acc": 0.6,
+    "coverage": 0.4
+   },
+   {
+    "key": "recurring_cue",
+    "n": 15,
+    "merchant_acc": 0.3333,
+    "primary_acc": 0.3333,
+    "detailed_acc": 0.3333,
+    "coverage": 0.3333
+   },
+   {
+    "key": "store_id_noise",
+    "n": 26,
+    "merchant_acc": 0.7308,
+    "primary_acc": 0.7308,
+    "detailed_acc": 0.7308,
+    "coverage": 0.6923
+   }
+  ],
+  "v2": [
+   {
+    "key": "aggregator_masked",
+    "n": 7,
+    "merchant_acc": 0.7143,
+    "primary_acc": 0.8571,
+    "detailed_acc": 0.8571,
+    "coverage": 0.5714
+   },
+   {
+    "key": "allcaps_truncated",
+    "n": 9,
+    "merchant_acc": 0.8889,
+    "primary_acc": 0.8889,
+    "detailed_acc": 0.8889,
+    "coverage": 0.8889
+   },
+   {
+    "key": "ambiguous_category",
+    "n": 15,
+    "merchant_acc": 0.8667,
+    "primary_acc": 0.8667,
+    "detailed_acc": 0.8667,
+    "coverage": 0.8
+   },
+   {
+    "key": "city_state_suffix",
+    "n": 10,
+    "merchant_acc": 1.0,
+    "primary_acc": 1.0,
+    "detailed_acc": 1.0,
+    "coverage": 1.0
+   },
+   {
+    "key": "clean",
+    "n": 2,
+    "merchant_acc": 0.5,
+    "primary_acc": 1.0,
+    "detailed_acc": 1.0,
+    "coverage": 0.5
+   },
+   {
+    "key": "false_cue",
+    "n": 1,
+    "merchant_acc": 0.0,
+    "primary_acc": 1.0,
+    "detailed_acc": 1.0,
+    "coverage": 0.0
+   },
+   {
+    "key": "hidden_recurring",
+    "n": 2,
+    "merchant_acc": 0.0,
+    "primary_acc": 0.5,
+    "detailed_acc": 0.0,
+    "coverage": 0.0
+   },
+   {
+    "key": "processor_prefix",
+    "n": 15,
+    "merchant_acc": 0.7333,
+    "primary_acc": 0.8667,
+    "detailed_acc": 0.8667,
+    "coverage": 0.8
+   },
+   {
+    "key": "recurring_cue",
+    "n": 15,
+    "merchant_acc": 0.8667,
+    "primary_acc": 0.8667,
+    "detailed_acc": 0.8667,
+    "coverage": 0.8667
+   },
+   {
+    "key": "store_id_noise",
+    "n": 26,
+    "merchant_acc": 0.9615,
+    "primary_acc": 0.9231,
+    "detailed_acc": 0.9231,
+    "coverage": 0.9615
+   }
+  ]
+ },
+ "slices": {
+  "by_difficulty": {
+   "v1": [
+    {
+     "key": "easy",
+     "n": 12,
+     "merchant_acc": 0.8333,
+     "primary_acc": 0.8333,
+     "detailed_acc": 0.8333,
+     "coverage": 0.8333
+    },
+    {
+     "key": "hard",
+     "n": 19,
+     "merchant_acc": 0.2105,
+     "primary_acc": 0.4211,
+     "detailed_acc": 0.3684,
+     "coverage": 0.1579
+    },
+    {
+     "key": "medium",
+     "n": 24,
+     "merchant_acc": 0.5833,
+     "primary_acc": 0.6667,
+     "detailed_acc": 0.6667,
+     "coverage": 0.5833
+    }
+   ],
+   "v2": [
+    {
+     "key": "easy",
+     "n": 12,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    },
+    {
+     "key": "hard",
+     "n": 19,
+     "merchant_acc": 0.5789,
+     "primary_acc": 0.7368,
+     "detailed_acc": 0.6842,
+     "coverage": 0.5789
+    },
+    {
+     "key": "medium",
+     "n": 24,
+     "merchant_acc": 0.9167,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 0.9167
+    }
+   ]
+  },
+  "by_primary": {
+   "v1": [
+    {
+     "key": "ENTERTAINMENT",
+     "n": 4,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    },
+    {
+     "key": "FOOD_AND_DRINK",
+     "n": 14,
+     "merchant_acc": 0.5714,
+     "primary_acc": 0.7143,
+     "detailed_acc": 0.7143,
+     "coverage": 0.5714
+    },
+    {
+     "key": "GENERAL_MERCHANDISE",
+     "n": 10,
+     "merchant_acc": 0.8,
+     "primary_acc": 1.0,
+     "detailed_acc": 0.9,
+     "coverage": 0.7
+    },
+    {
+     "key": "GENERAL_SERVICES",
+     "n": 4,
+     "merchant_acc": 0.0,
+     "primary_acc": 0.0,
+     "detailed_acc": 0.0,
+     "coverage": 0.0
+    },
+    {
+     "key": "LOAN_PAYMENTS",
+     "n": 2,
+     "merchant_acc": 0.0,
+     "primary_acc": 0.0,
+     "detailed_acc": 0.0,
+     "coverage": 0.0
+    },
+    {
+     "key": "MEDICAL",
+     "n": 2,
+     "merchant_acc": 0.5,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 0.5
+    },
+    {
+     "key": "PERSONAL_CARE",
+     "n": 3,
+     "merchant_acc": 0.3333,
+     "primary_acc": 0.6667,
+     "detailed_acc": 0.6667,
+     "coverage": 0.3333
+    },
+    {
+     "key": "RENT_AND_UTILITIES",
+     "n": 4,
+     "merchant_acc": 0.0,
+     "primary_acc": 0.0,
+     "detailed_acc": 0.0,
+     "coverage": 0.0
+    },
+    {
+     "key": "TRANSFER_OUT",
+     "n": 3,
+     "merchant_acc": 0.0,
+     "primary_acc": 0.0,
+     "detailed_acc": 0.0,
+     "coverage": 0.0
+    },
+    {
+     "key": "TRANSPORTATION",
+     "n": 6,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    },
+    {
+     "key": "TRAVEL",
+     "n": 3,
+     "merchant_acc": 0.0,
+     "primary_acc": 0.0,
+     "detailed_acc": 0.0,
+     "coverage": 0.0
+    }
+   ],
+   "v2": [
+    {
+     "key": "ENTERTAINMENT",
+     "n": 4,
+     "merchant_acc": 0.75,
+     "primary_acc": 0.75,
+     "detailed_acc": 0.75,
+     "coverage": 1.0
+    },
+    {
+     "key": "FOOD_AND_DRINK",
+     "n": 14,
+     "merchant_acc": 0.8571,
+     "primary_acc": 0.9286,
+     "detailed_acc": 0.9286,
+     "coverage": 0.8571
+    },
+    {
+     "key": "GENERAL_MERCHANDISE",
+     "n": 10,
+     "merchant_acc": 0.8,
+     "primary_acc": 1.0,
+     "detailed_acc": 0.9,
+     "coverage": 0.7
+    },
+    {
+     "key": "GENERAL_SERVICES",
+     "n": 4,
+     "merchant_acc": 0.75,
+     "primary_acc": 0.75,
+     "detailed_acc": 0.75,
+     "coverage": 0.75
+    },
+    {
+     "key": "LOAN_PAYMENTS",
+     "n": 2,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    },
+    {
+     "key": "MEDICAL",
+     "n": 2,
+     "merchant_acc": 0.5,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 0.5
+    },
+    {
+     "key": "PERSONAL_CARE",
+     "n": 3,
+     "merchant_acc": 0.3333,
+     "primary_acc": 0.6667,
+     "detailed_acc": 0.6667,
+     "coverage": 0.3333
+    },
+    {
+     "key": "RENT_AND_UTILITIES",
+     "n": 4,
+     "merchant_acc": 0.75,
+     "primary_acc": 0.75,
+     "detailed_acc": 0.75,
+     "coverage": 0.75
+    },
+    {
+     "key": "TRANSFER_OUT",
+     "n": 3,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    },
+    {
+     "key": "TRANSPORTATION",
+     "n": 6,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    },
+    {
+     "key": "TRAVEL",
+     "n": 3,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    }
+   ]
+  },
+  "by_amount_bucket": {
+   "v1": [
+    {
+     "key": "$10-50",
+     "n": 24,
+     "merchant_acc": 0.5417,
+     "primary_acc": 0.7083,
+     "detailed_acc": 0.6667,
+     "coverage": 0.5417
+    },
+    {
+     "key": "$50-200",
+     "n": 13,
+     "merchant_acc": 0.4615,
+     "primary_acc": 0.5385,
+     "detailed_acc": 0.5385,
+     "coverage": 0.4615
+    },
+    {
+     "key": "<$10",
+     "n": 10,
+     "merchant_acc": 0.8,
+     "primary_acc": 0.9,
+     "detailed_acc": 0.9,
+     "coverage": 0.7
+    },
+    {
+     "key": ">$200",
+     "n": 8,
+     "merchant_acc": 0.125,
+     "primary_acc": 0.125,
+     "detailed_acc": 0.125,
+     "coverage": 0.125
+    }
+   ],
+   "v2": [
+    {
+     "key": "$10-50",
+     "n": 24,
+     "merchant_acc": 0.75,
+     "primary_acc": 0.875,
+     "detailed_acc": 0.8333,
+     "coverage": 0.7917
+    },
+    {
+     "key": "$50-200",
+     "n": 13,
+     "merchant_acc": 0.9231,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 0.9231
+    },
+    {
+     "key": "<$10",
+     "n": 10,
+     "merchant_acc": 0.9,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 0.8
+    },
+    {
+     "key": ">$200",
+     "n": 8,
+     "merchant_acc": 0.75,
+     "primary_acc": 0.75,
+     "detailed_acc": 0.75,
+     "coverage": 0.75
+    }
+   ]
+  },
+  "by_match_type": {
+   "v1": [
+    {
+     "key": "exact",
+     "n": 9,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    },
+    {
+     "key": "fallback",
+     "n": 23,
+     "merchant_acc": 0.0435,
+     "primary_acc": 0.1304,
+     "detailed_acc": 0.087,
+     "coverage": 0.0
+    },
+    {
+     "key": "keyword",
+     "n": 5,
+     "merchant_acc": 0.0,
+     "primary_acc": 0.8,
+     "detailed_acc": 0.8,
+     "coverage": 0.0
+    },
+    {
+     "key": "normalized",
+     "n": 18,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    }
+   ],
+   "v2": [
+    {
+     "key": "aggregator",
+     "n": 8,
+     "merchant_acc": 0.875,
+     "primary_acc": 0.75,
+     "detailed_acc": 0.75,
+     "coverage": 1.0
+    },
+    {
+     "key": "exact",
+     "n": 13,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    },
+    {
+     "key": "fallback",
+     "n": 5,
+     "merchant_acc": 0.2,
+     "primary_acc": 0.6,
+     "detailed_acc": 0.4,
+     "coverage": 0.0
+    },
+    {
+     "key": "keyword",
+     "n": 5,
+     "merchant_acc": 0.0,
+     "primary_acc": 0.8,
+     "detailed_acc": 0.8,
+     "coverage": 0.0
+    },
+    {
+     "key": "normalized",
+     "n": 24,
+     "merchant_acc": 1.0,
+     "primary_acc": 1.0,
+     "detailed_acc": 1.0,
+     "coverage": 1.0
+    }
+   ]
+  }
+ }
+}

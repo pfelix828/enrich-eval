@@ -1,0 +1,102 @@
+{
+ "fields": {
+  "merchant_correct": {
+   "acc_old": 0.5091,
+   "acc_new": 0.8182,
+   "delta": 0.3091,
+   "improved": 18,
+   "regressed": 1
+  },
+  "primary_correct": {
+   "acc_old": 0.6182,
+   "acc_new": 0.9091,
+   "delta": 0.2909,
+   "improved": 17,
+   "regressed": 1
+  },
+  "detailed_correct": {
+   "acc_old": 0.6,
+   "acc_new": 0.8909,
+   "delta": 0.2909,
+   "improved": 17,
+   "regressed": 1
+  },
+  "recurring_correct": {
+   "acc_old": 0.8182,
+   "acc_new": 0.9455,
+   "delta": 0.1273,
+   "improved": 8,
+   "regressed": 1
+  }
+ },
+ "regressions": [
+  {
+   "id": "seed_009",
+   "field": "merchant_correct",
+   "raw_descriptor": "PYPL *STEAMGAMES 4029357733",
+   "pattern_tags": "processor_prefix;store_id_noise",
+   "old": "Steam / ENTERTAINMENT",
+   "new": "PayPal / GENERAL_MERCHANDISE",
+   "gold_merchant": "Steam",
+   "v1_pred_merchant": "Steam",
+   "v2_pred_merchant": "PayPal",
+   "gold_category": "ENTERTAINMENT / ENTERTAINMENT_VIDEO_GAMES",
+   "v1_pred_category": "ENTERTAINMENT / ENTERTAINMENT_VIDEO_GAMES",
+   "v2_pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+   "v1_recurring": false,
+   "v2_recurring": false,
+   "gold_recurring": false
+  },
+  {
+   "id": "seed_009",
+   "field": "primary_correct",
+   "raw_descriptor": "PYPL *STEAMGAMES 4029357733",
+   "pattern_tags": "processor_prefix;store_id_noise",
+   "old": "Steam / ENTERTAINMENT",
+   "new": "PayPal / GENERAL_MERCHANDISE",
+   "gold_merchant": "Steam",
+   "v1_pred_merchant": "Steam",
+   "v2_pred_merchant": "PayPal",
+   "gold_category": "ENTERTAINMENT / ENTERTAINMENT_VIDEO_GAMES",
+   "v1_pred_category": "ENTERTAINMENT / ENTERTAINMENT_VIDEO_GAMES",
+   "v2_pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+   "v1_recurring": false,
+   "v2_recurring": false,
+   "gold_recurring": false
+  },
+  {
+   "id": "seed_009",
+   "field": "detailed_correct",
+   "raw_descriptor": "PYPL *STEAMGAMES 4029357733",
+   "pattern_tags": "processor_prefix;store_id_noise",
+   "old": "Steam / ENTERTAINMENT",
+   "new": "PayPal / GENERAL_MERCHANDISE",
+   "gold_merchant": "Steam",
+   "v1_pred_merchant": "Steam",
+   "v2_pred_merchant": "PayPal",
+   "gold_category": "ENTERTAINMENT / ENTERTAINMENT_VIDEO_GAMES",
+   "v1_pred_category": "ENTERTAINMENT / ENTERTAINMENT_VIDEO_GAMES",
+   "v2_pred_category": "GENERAL_MERCHANDISE / GENERAL_MERCHANDISE_OTHER_GENERAL_MERCHANDISE",
+   "v1_recurring": false,
+   "v2_recurring": false,
+   "gold_recurring": false
+  },
+  {
+   "id": "seed_055",
+   "field": "recurring_correct",
+   "raw_descriptor": "MONTHLY MARKET SF",
+   "pattern_tags": "false_cue",
+   "old": "Unknown / FOOD_AND_DRINK",
+   "new": "Unknown / FOOD_AND_DRINK",
+   "gold_merchant": "Monthly Market",
+   "v1_pred_merchant": "Unknown",
+   "v2_pred_merchant": "Unknown",
+   "gold_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_GROCERIES",
+   "v1_pred_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_GROCERIES",
+   "v2_pred_category": "FOOD_AND_DRINK / FOOD_AND_DRINK_GROCERIES",
+   "v1_recurring": false,
+   "v2_recurring": true,
+   "gold_recurring": false
+  }
+ ]
+}
