@@ -1,5 +1,7 @@
 # EnrichEval — a quality lab for transaction enrichment
 
+**Live demo: [enrich-eval.streamlit.app](https://enrich-eval.streamlit.app)**
+
 Most "data science" portfolio projects build a model. This one measures whether a model is any
 good, which is the harder and more under-served problem. It is an evaluation harness for a
 **transaction-enrichment** system: the kind of system that turns a raw bank-statement string like
