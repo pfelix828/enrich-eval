@@ -57,7 +57,7 @@ results and what they mean are written up in [reports/findings.md](reports/findi
 ```
 data/
   plaid_pfc_taxonomy.csv     real, downloaded from Plaid's public docs (16 primary, 103 detailed)
-  gold_set_seed.csv          52-row seed, built by the generator (do not hand-edit)
+  gold_set_seed.csv          55-row seed, built by the generator (do not hand-edit)
   judge_validation.csv       24 human-labeled merchant-equivalence pairs for judge validation
 docs/
   labeling_rubric.md         what "correct" means; the definition-of-quality artifact
@@ -77,7 +77,7 @@ reports/                     generated: predictions, metrics, investigations, fi
 
 ## What's in the seed (Phase 0)
 
-52 hand-curated rows across 11 of the 16 PFC primary categories, weighted toward the patterns that
+55 hand-curated rows across 11 of the 16 PFC primary categories, weighted toward the patterns that
 break naive enrichment so the metrics layer has something real to slice on:
 
 - **processor prefixes** — `SQ *`, `TST*`, `PYPL *` masking the merchant
